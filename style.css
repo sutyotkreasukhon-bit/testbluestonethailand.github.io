@@ -1,0 +1,184 @@
+body {
+  font-family: "Noto Sans Thai";
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* เต็มความสูงจอ */
+  display: flex;
+  justify-content: center; /* จัดกลางแนวนอน */
+  align-items: center;    /* จัดกลางแนวตั้ง */
+  background: url('images/bg-office.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.login-container {
+  width: 350px;
+  margin: 80px auto;
+  background: rgba(255,255,255,0.95);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  text-align: center;
+  
+}
+.logo {
+  width: 100%;
+  margin-bottom: 8px;
+}
+input {
+  width: 90%;
+  padding: 10px;
+  margin: 12px 0px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+.password-container {
+  position: relative;
+  width: 90%;
+  margin: 8px auto;
+}
+
+.password-container input {
+  width: 100%;
+  padding: 10px;
+  padding-right: 40px; /* สำหรับช่องที่มีปุ่มตา */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px;
+  color: #555;
+}
+button {
+  width: 95%;
+  padding: 10px;
+  margin-top: 40px;
+  background: #005b96;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+button:hover {
+  background: #004b80;
+}
+/* กรอบของ Remember Me */
+.remember {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+}
+
+/* ซ่อน checkbox เดิม */
+.remember input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* สร้าง checkbox ใหม่ */
+.checkmark {
+  width: 14px;
+  height: 14px;
+  border: 2px solid #005b96;
+  border-radius: 4px; /* ขอบโค้ง */
+  display: inline-block;
+  margin-right: 8px;
+  background-color: white;
+  box-shadow: 4px 4px 0px rgba(0,0,0); /* เงา */
+}
+
+/* เมื่อ checkbox ถูกเลือก */
+.remember input:checked + .checkmark {
+  background-color: #018eec;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="white"><path d="M7.629 13.314L3.314 9l1.414-1.414L7.629 10.486l7.243-7.243L16.286 4.657z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.login-link {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
+  color: #005b96; /* สีตัวอักษร */
+  text-decoration: underline; /* ใส่เส้นใต้ */
+  text-decoration-color: #005b96; /* กำหนดสีเส้นใต้ */
+  cursor: pointer;
+}
+
+.login-link:hover {
+  color: #003f6b; /* สีตัวอักษรเมื่อ hover */
+  text-decoration: underline;
+  text-decoration-color: #003f6b; /* สีเส้นใต้เปลี่ยนตาม hover */
+}
+.forgot-link {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
+  color: #005b96; /* สีตัวอักษร */
+  text-decoration: underline; /* ใส่เส้นใต้ */
+  text-decoration-color: #005b96; /* กำหนดสีเส้นใต้ */
+  cursor: pointer;
+}
+
+.forgot-link:hover {
+  color: #003f6b; /* สีตัวอักษรเมื่อ hover */
+  text-decoration: underline;
+  text-decoration-color: #003f6b; /* สีเส้นใต้เปลี่ยนตาม hover */
+}
+.register-link{
+  display: block;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: #005b96;
+    text-decoration: underline; /* ใส่เส้นใต้ */
+    cursor: pointer;
+}
+.register-link:hover {
+  color: #003f6b; /* สีตัวอักษรเมื่อ hover */
+  text-decoration: underline;
+  text-decoration-color: #003f6b; /* สีเส้นใต้เปลี่ยนตาม hover */
+}
+hr { margin: 15px 0; }
+
+.website-link {
+  display: block;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: #005b96;
+    text-decoration: underline; /* ใส่เส้นใต้ */
+    cursor: pointer;
+}
+.website-link:hover {
+  color: #003f6b; /* สีตัวอักษรเมื่อ hover */
+  text-decoration: underline;
+  text-decoration-color: #003f6b; /* สีเส้นใต้เปลี่ยนตาม hover */
+}
+.social-icons {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 10px;
+}
+.social-icons img {
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.social-icons img:hover {
+  transform: scale(1.1);
+}
